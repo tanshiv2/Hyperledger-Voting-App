@@ -1,0 +1,327 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+
+var d = new Date();
+console.log(d);
+var localTime = d.getTime();
+console.log(localTime);
+var localOffset = d.getTimezoneOffset() * 60000;
+
+var utc = localTime + localOffset;
+console.log(utc);
+// obtain and add destination's UTC time offset
+// for example, Bombay 
+// which is UTC + 5.5 hours
+var offset = 5.5;   
+var bombay = utc + (3600000*offset);
+
+var nd = new Date(bombay); 
+alert("Bombay time is " + nd.toLocaleString() + "<br>");
+
+
+var sec = 15;
+var myTimer = document.getElementById('myTimer');
+var myBtn = document.getElementById('myBtn');
+window.onload = countDown;
+
+function countDown() {
+  if (sec < 10) {
+    myTimer.innerHTML = "0" + sec;
+  } else {
+    myTimer.innerHTML = sec;
+  }
+  if (sec <= 0) {
+    $("#myBtn").removeAttr("disabled");
+    $("#myBtn").removeClass().addClass("btnEnable");
+    $("#myTimer").fadeTo(2500, 0);
+    myBtn.innerHTML = "Click Me!";
+    return;
+  }
+  sec -= 1;
+  window.setTimeout(countDown, 1000);
+}
+
+
+
+var date = new Date();
+date.setHours( 0,0,0,0 );
+</script>
+</body>
+</html>
+
+
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Blockchain Vote App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+  <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+  <meta name="author" content="FreeHTML5.co" />
+    <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+                                          <!-- addition -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="web_files/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="web_files/css/icomoon.css">
+  <!-- Themify Icons-->
+  <link rel="stylesheet" href="web_files/css/themify-icons.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="web_files/css/bootstrap.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="web_files/css/magnific-popup.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="web_files/css/bootstrap-datepicker.min.css">
+
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="web_files/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="web_files/css/owl.theme.default.min.css">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="web_files/css/style.css">
+
+  <!-- Modernizr JS -->
+  <script src="web_files/js/modernizr-2.6.2.min.js"></script>
+                                                       <!--end addition -->
+</head>
+<body>
+  <div class="gtco-loader"></div>
+  
+  <div id="page">
+  <nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+      
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <div id="gtco-logo" float="left"><img src="web_files/images/Logo.jpg" height="40px" width="40px"><a href="main.html"> National Institute of Technology, Surat </a></div>
+        </div>
+        <div class="col-xs-6 text-right menu-1">
+          <ul>
+            <li><a href="destination.php">option1</a></li>
+            <li class="has-dropdown">
+              <a href="#">option2</a>
+              <ul class="dropdown">
+                <li><a href="#">choice</a></li>
+                <li><a href="#">choice</a></li>
+                <li><a href="#">choice</a></li>
+                <li><a href="#">choice</a></li>
+              </ul>
+            </li>
+            <li><a href="pricing.html">option3</a></li>
+            <li><a href="contact.html">option4</a></li>
+          </ul> 
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+  
+  <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(web_files/images/img_bg_2.jpg)">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 text-left">
+          <div class="row row-mt-15em">
+          <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+              <div class="form-wrap">
+                <div class="tab">
+                  
+                  <div class="tab-content">
+                    <div class="tab-content-inner active" data-content="signup">
+                      <h3>Check votes</h3>
+            
+                                   <!--  <div class="container">
+                                        <div class="row"> 
+                                    -->
+                                  <!--<div class="col-sm-12"><h2>Hyperledger Composer Vote Application</h2></div> -->
+                      <label for="resultdate">Select Date</label>
+                      <div class="row form-group">
+                        <input type="date" name="resultDay" id="resultDay">
+                      </div>
+
+                      <label for="resultdate">Select Time</label>
+                      <div class="row form-group">
+                        <input type="time" name="resultTime" id="resultTime">    
+                      </div>
+                      <div class="row form-group">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                  <div class="modal" id="modalResult" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <canvas id="resultChart" width="100px" height="100px"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+  </header>
+ 
+<script>
+var candidateList = [];
+$(document).ready(function(){
+  $.get("http://localhost:3000/api/Candidate", function(data){
+    var html = '';
+    for(i=0;i<data.length;i++){
+      candidateList.push(data[i]);
+
+      html += '<div class="col-sm-4" style="text-align: center; padding: 5px; border-style: solid; border-width: 2px;">';
+      html += '<img src="image/user.png" class="rounded mx-auto d-block" style="width: 100px; height: 100px;">';
+      html += '<a class="btn btn-primary candidateSelect" data-name="' + data[i].firstName + '" data-value="' + data[i].candidateId + '" style="margin-top: 2px;">' + data[i].firstName + ' ' + data[i].lastName + '</a></div>';
+    }
+    $("#dvCandidates").empty();
+    $("#dvCandidates").html(html);
+
+    $(".candidateSelect").on("click", function(){
+      var candidateID = $(this).data("value");
+      var candidateName = $(this).data("name");
+
+      var param = {
+        "$class": "org.example.empty.VoteLog",
+        "voteID": new Date().getTime().toString(),
+        "candidate": "resource:org.example.empty.Candidate#" + candidateName,
+        "transactionId": null,
+        "timestamp": new Date().toString()
+      };
+      
+      $.post("http://localhost:3000/api/VoteLog/", param, function(data){
+        $("#dvAlert").html('<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have used your vote in successfully!  </div>');
+          window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+              $(this).remove(); 
+            });
+          }, 4000);
+        
+        setTimeout(getResults, 500);
+      });
+    });
+  });
+});
+
+function getResults(){
+  var dataArr = [];
+  var backgroundColorArr = [];
+  var borderArr = [];
+  var labelsArr = [];
+  var colorArr = ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'];
+
+  for(var i=0;i<candidateList.length;i++){
+    dataArr.push(0);
+    labelsArr.push(candidateList[i].firstName + " " + candidateList[i].lastName);
+    backgroundColorArr.push(colorArr[i%2]);
+    borderArr.push(colorArr[i%2]);
+  }
+
+  $.get("http://localhost:3000/api/Vote", function(data){
+    for(var i=0;i<data.length;i++){
+      for(var j=0;j<candidateList.length;j++){
+        if(data[i].candidate == 'resource:org.example.empty.Candidate#' + candidateList[j].firstName){
+          var count = dataArr[j] + 1;
+          dataArr[j] = count;
+        }
+      }
+    }
+  });
+
+  setTimeout(function(){
+    var ctx = document.getElementById("resultChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labelsArr,
+      datasets: [{
+        label: '# of Votes',
+        data: dataArr,
+        backgroundColor: backgroundColorArr,
+        borderColor: borderArr,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+  }, 500);
+
+  setTimeout(function(){$("#modalResult").modal("show");}, 700);
+}
+
+</script>
+
+                                              <!--addition -->
+  <script src="web_files/js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="web_files/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="web_files/js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="web_files/js/jquery.waypoints.min.js"></script>
+  <!-- Carousel -->
+  <script src="web_files/js/owl.carousel.min.js"></script>
+  <!-- countTo -->
+  <script src="web_files/js/jquery.countTo.js"></script>
+
+  <!-- Stellar Parallax -->
+  <script src="web_files/js/jquery.stellar.min.js"></script>
+
+  <!-- Magnific Popup -->
+  <script src="web_files/js/jquery.magnific-popup.min.js"></script>
+  <script src="web_files/js/magnific-popup-options.js"></script>
+  
+  <!-- Datepicker -->
+  <script src="web_files/js/bootstrap-datepicker.min.js"></script>
+  
+  <!-- Main -->
+  <script src="web_files/js/main.js"></script>
+
+                                          <!-- end addition -->
+</body>
+</html>

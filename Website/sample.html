@@ -1,0 +1,71 @@
+<html>
+<head>
+</head>
+<body>
+	
+<script type="text/javascript">
+
+
+var new = sha256_digest('httpClient');
+console.log(new);
+// reqwest('http://localhost:3000/api/Candidate', function (resp) {
+//  qwery('#content').html(resp)
+// })
+
+// reqwest({
+//     url: 'http://localhost:3000/api/Candidate'
+//   , method: 'post'
+//   , data: { 
+// 		  $class: 'org.example.empty.Candidate',
+// 		  candidateId: 'cand5',
+// 		  post: 'CAS',
+// 		  firstName: 'Laalu',
+// 		  lastName: 'Prasad'
+// } 
+//   , success: function (resp) {
+//      qwery('#content').html(resp)
+//     }
+// })
+
+// return this.httpClient.post('http://localhost:3000/api/org.example.empty.Candidate', collector).toPromise()
+// const collector = {
+// {
+//   $class: 'org.example.empty.Candidate',
+//   candidateId: 'cand5',
+//   post: 'CAS',
+//   firstName: 'Laalu',
+//   lastName: 'Prasad'
+// }
+// ;
+
+let data = {
+    $class: 'org.example.empty.Candidate',
+	candidateId: 'cand5',
+	post: 'CAS',
+	firstName: 'Laalu',
+  	lastName: 'Prasad'
+}
+// The parameters we are gonna pass to the fetch function
+let fetchData = { 
+    method: 'POST', 
+    body: data,
+    headers: new Headers()
+}
+fetch('http://localhost:3000/api/Candidate', fetchData)
+.then(function() {
+    // Handle response you get from the server
+});
+
+// fetch('http://localhost:3000/api/Candidate')
+//   .then(function(data) {
+//     // Here you get the data to modify as you please
+//     })
+//   .catch(function(error) {
+//     // If there is any error you will catch them here
+//   }); 
+</script>
+
+</body>
+
+
+</html>
